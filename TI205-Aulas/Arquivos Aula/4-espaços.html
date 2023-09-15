@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Espaços do Bootstrap 5 (margin, padding e gutter)</title>
+  
+<!-- jQuery 3.5.1. -->
+<script src="bootstrap5/jquery-3.5.1.min.js"></script>
+
+<!-- CSS Bootstrap 5 -->
+<link rel="stylesheet" href="bootstrap5/bootstrap.min.css">
+
+<!-- Bootstrap javacsript Bundle com Popper -->
+  <script src="bootstrap5/bootstrap.bundle.min.js"></script>
+
+<!-- Ícones do Bootstrap 5 -->
+<link rel="stylesheet" href="bootstrap5/bootstrap-icons.css">
+
+<style type="text/css">
+    p {
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+    li {
+        font-size: 1.2rem;
+    }
+    .destaque {
+        color: rgb(174, 15, 15);
+        font-weight: bold;
+    }
+</style>
+<body>
+    <!--
+		<p>O Bootstrap 5 oferece muitas classes para espaçamento (padding e margin). As principais classes de espaçamento do Bootstrap 5 são:</p>
+        1) Classes gutter (calhas): criam espaços entre as colunas colocadas dentro de uma row. O valor varia entre 0 (sem padding) até 5. O espaço padrão entre colunas é 1.5rem, ou 24px (ver tabela abaixo)
+			OBS: O valor padrão de espaço é 1rem = 16px (tamanho de texto da tag <html>)
+        Os valores em pixels são os seguintes:
+			0 - nenhum padding
+			1 - 25% do valor padrão  (1rem) = 4px
+			2 - 50% do valor padrão  (1rem) = 8px
+			3 - 100% do valor padrão (1rem) = 16px
+			4 - 150% do valor padrão (1rem) = 24px
+			5 - 300% do valor padrão (1rem) = 48px 
+
+        Exemplo: a classe g-3 cria espaços de 16px entre as colunas de uma row
+
+        2) Classes para margin e padding para qualquer tag - primeira letra é "m" ou "p", e a segunda pode ser t-top, b-bottom, s-left, e-right, x-esquerda e direita, y-top e bottom. Ao final é informado um valor de 0 até 5, conforme apresentado no item 1. Exemplos:
+			mt-1 - margin top 4px
+			px-3 - padding esquerda e direita 16px
+			mb-3 - margin bottom 16px
+			px-0 - coloca padding-left e padding-right zerados (direção horizontal).
+	-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Espaços no Bootstrap 5</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>O Bootstrap 5 oferece muitas classes para espaçamento (padding e margin). A imagem abaixo mostra esses espaços:</p>
+                <img src="imagens/boxmodel.png" width="30%">
+                <p><br><strong>Tamanhos de espaços (em pixels)</strong></p>
+                <ul>
+                    <li><strong>0</strong> - Nenhum espaço</li>
+                    <li><strong>1</strong> - 25% do valor padrão  (1rem) = 4px</li>
+                    <li><strong>2</strong> - 50% do valor padrão  (1rem) = 8px</li>
+                    <li><strong>3</strong> - 100% do valor padrão (1rem) = 16px</li>
+                    <li><strong>4</strong> - 150% do valor padrão (1rem) = 24px</li>
+                    <li><strong>5</strong> - 300% do valor padrão (1rem) = 48px</li>
+                </ul>
+                <p><strong>Sentidos dos espaços</strong>: da mesma forma que em CSS padrão, temos quatro sentidos para espacejamento no Bootstrap, cada um deles representado por letras minúsculas:</p>
+                <ul>
+                    <li><strong>t</strong> - espaço superior</li>
+                    <li><strong>b</strong> - espaço inferior</li>
+                    <li><strong>s</strong> - espaço à esquerda. A letra "s" significa "start" (início da linha)<span class="destaque">*</span></li>
+                    <li><strong>e</strong> - espaço à direita. A letra "e" significa "end" (final da linha) <span class="destaque">*</span></li>
+                </ul>
+                <p><span class="destaque">*Observação</span>: em português escrevemos da esquerda para direita, mas existem idomas em que se escreve da direita para esquerda, como o árabe, o hebraico e o persa. Para evitar confusão com essas diferenças entre os idiomas, o Bootstrap 5 usa as letras "s" para início da linha (no nosso caso, esquerda) e "e" para final da linha (no nosso caso, direita).</p>
+                <p><strong>Direção dos espaços</strong>: existem duas direções (x e y) que perimtem definir espaços na vertical e horizontal ao mesmo tempo:</p>
+                <ul>
+                    <li><strong>x</strong> - espaço à esquerda e à direita</li>
+                    <li><strong>y</strong> - espaço superior e inferior</li>
+                </ul>
+                <hr>
+                <p><strong>Margens</strong>: as classes que controlam as margens começam com a letra "m" minúscula, devem ter um tamanho e podem ter um sentido/direção. Exemplos:</p>
+                <ul>
+                    <li><strong>mt-1</strong> - margem superior (top) tamanho 1 (4px)</li>
+                    <li><strong>mx-3</strong> - margens esquerda e direita (x) tamanho 3 (16px)</li>
+                    <li><strong>m-2</strong> - as quatro margens com tamanho 2 (8px)</li>
+                    <li><strong>my-5</strong> - margens superior e inferior (y) com tamanho 5 (48px)</li>
+                </ul>
+                <p><strong>Paddings</strong>: as classes que controlam os paddings começam com a letra "p" minúscula, devem ter um tamanho e podem ter um sentido/direção. Exemplos:</p>
+                <ul>
+                    <li><strong>pt-1</strong> - padding-top (superior) tamanho 1 (4px)</li>
+                    <li><strong>px-3</strong> - padding-left e padding-right (esquerda e direita - x) tamanho 3 (16px)</li>
+                    <li><strong>p-2</strong> - os quatro paddings com tamanho 2 (8px)</li>
+                    <li><strong>py-5</strong> - padding-top e padding-bottom (superior e inferior - y) com tamanho 5 (48px)</li>
+                </ul>
+                <hr>
+                <p><strong>Calhas (gutters)</strong>: são os espaços entre as colunas no sistema de grid do Bootstrap 5. O valor padrdão é 24px (equivalente ao número 4). As classes que controlam esses espaços começam com a letra "g" minúscula, e podem receber o tamanho de 0 até 5. Nesse case não é informado sentido nem direção. Um detalhe: as classes do tipo calha devem ser informadas na div que contém a classe "row". Exemplo:</p>
+                <p><strong>&lt;div class="row g-2"&gt;</strong> - espaços entre as colunas filhas dessa &lt;div&gt; igual a 8px.</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

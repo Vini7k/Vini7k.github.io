@@ -1,0 +1,118 @@
+
+:root {
+    --cor-fundo: rgb(107, 5, 5);
+    --cor-texto: white;
+    --cor-hover: rgb(230, 230, 230);
+    --cor-fundo-dropdown : rgb(255, 149, 149); /* verde claro */
+}
+
+.card {
+    margin-left: 2rem;
+    width: 20em;
+    height: 25em;
+    box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 120ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 0.5em;
+    padding-bottom: 3.4em;
+}
+.card-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    text-align: center;
+    margin-left: 2.5rem;
+    font-weight: 350;
+    color: #000;
+    
+}
+.card:active {
+    transform: scale(0.99);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.text {
+    max-width: 55px;
+}
+.css-p{
+    font-size: 1.1rem;
+}
+.image {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 95%;
+    display: grid;
+    place-items: center;
+    background-size: 100%;
+}
+a{
+    text-decoration:none;
+}
+body{
+    background-color: rgb(198, 176, 176);
+}
+.css-titulo {
+    font-weight: 500px;
+    font-size: 5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: bold;
+    color: rgb(230, 230, 230);
+    filter: drop-shadow(0 0 2rem rgb(107,5,5));
+    padding-bottom: 1.7rem;
+}
+.cor-navbar {
+   
+    background-color: var(--cor-fundo) !important;
+}
+.navbar-brand {
+    
+   
+    color:var(--cor-fundo-dropdown) !important;
+    font-weight: bold;
+}
+.nav-link { 
+   
+    color:var(--cor-texto) !important; 
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.nav-link:hover, .navbar-brand { 
+
+    color:var(--cor-hover) !important; 
+}
+.dropdown-menu {
+ 
+    background-color: var(--cor-fundo) !important;
+    border: 2px solid var(--cor-fundo-dropdown);
+}
+.dropdown-item  {
+    
+    color: var(--cor-texto) !important;
+    font-size: 1.1em;
+}
+.dropdown-item:hover  {
+   
+    color: var(--cor-fundo) !important;
+    background-color: var(--cor-fundo-dropdown);
+    font-weight: bold;
+}
+.cor-icone {
+    fill: var(--cor-texto);
+}
+
+.cor-icone:hover {
+    fill: var(--cor-hover);
+}
+
+.navbar-toggler { 
+    border: 2px solid var(--cor-hover); 
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

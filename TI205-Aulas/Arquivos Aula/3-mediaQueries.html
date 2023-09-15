@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<!-- jQuery 3.5.1. -->
+	<script src="bootstrap5/jquery-3.5.1.min.js"></script>
+
+	<!-- Latest compiled and minified CSS Bootstrap 5 -->
+	<link rel="stylesheet" href="bootstrap5/bootstrap.min.css">
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+  	<script src="bootstrap5/bootstrap.bundle.min.js"></script>
+
+  	<!-- Ícones do Bootstrap 5 -->
+	<link rel="stylesheet" href="bootstrap5/bootstrap-icons.css">
+
+	<link rel="stylesheet" type="text/css" href="mediaQueries.css">
+
+	<script type="text/javascript">
+
+    var tipoDisp = "";
+    var tipoCol = 0;
+
+    function calculaLargura(){
+		larguraTela = $(window).width();
+		tipoCol = parseInt(larguraTela);
+		/*
+			Exibe o tipo de display no título
+		*/
+		if (tipoCol>1399) {
+			tipoDisp = "xxl";
+		} else if (tipoCol>1199 && tipoCol<1400) {
+		  	tipoDisp = "xl";
+		} else if (tipoCol>991 && tipoCol<1200) {
+		  	tipoDisp = "lg";
+		} else if (tipoCol>767 && tipoCol<992) {
+		  	tipoDisp = "md";
+		} else if (tipoCol>575 && tipoCol<768) {
+		  	tipoDisp = "sm";		  	
+		} else {
+		  	tipoDisp = "xs"; }
+	  	/*
+	  		Coloca o texto com a largura da tela na tag com id="largura"
+	  	*/
+		$("#largura").text("Media Queries ("+tipoDisp+"): "+larguraTela+"px");
+	}
+
+	$(document).ready(function(){
+		/*
+			Exibe a largura da tela quando a página estiver carregada
+		*/
+		calculaLargura();         
+		/*
+			A cada resize da página (mudança de largura) exibe a nova largura da página
+		*/
+		$(window).resize(function(){
+			calculaLargura();
+		})
+    })
+  </script>
+</head>
+<body class="text-center">
+	<h2 id="largura"></h2>
+	<div id="caixa">
+		<img id="imagem" src="imagens/Bootstrap 5.png">
+	</div>
+	
+</body>
+</html>

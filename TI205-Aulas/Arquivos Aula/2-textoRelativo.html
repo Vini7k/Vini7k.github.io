@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<!-- jQuery 3.5.1. -->
+	<script src="bootstrap5/jquery-3.5.1.min.js"></script>
+	<!-- Latest compiled and minified CSS Bootstrap 5 -->
+	<link rel="stylesheet" href="bootstrap5/bootstrap.min.css">
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+  	<script src="bootstrap5/bootstrap.bundle.min.js"></script>
+  	<!-- Ícones do Bootstrap 5 -->
+	<link rel="stylesheet" href="bootstrap5/bootstrap-icons.css">
+
+	<style type="text/css">
+
+		p, h3 {
+			font-family: verdana;
+			margin-left: 20px;
+		}
+		#caixa {
+			background-color: rgb(220,220,220);
+			border: solid 1px;
+			width: 550px;
+			height: auto;
+			margin-left: 20px;
+			font-size: 32px;
+			margin-bottom: 30px;
+		}
+		.tamanho2em {
+			font-size: 2em;
+			color: rgb(150,0,0);
+		}
+		.tamanho2rem {
+			font-size: 2rem;
+			color: rgb(0,50,150);
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var tamBody = $("body").css("font-size");
+			var tamHTML = $("html").css("font-size");
+			$("#titulo").text("Tamanho padrão de fonte: <body>="+tamBody+" e <html>="+tamHTML);
+			$("#p1").text($("#p1").text() + "-" + $("#p1").css("font-size"));
+			$("#p2").text($("#p2").text() + "-" + $("#p2").css("font-size"));
+			$("#p3").text($("#p3").text() + "-" + $("#p3").css("font-size"));
+			$("#p4").text($("#p4").text() + "-" + $("#p4").css("font-size"));
+		})
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h3>Tamanhos de fonte em design responsivo</h3>
+		<p>Os tamanhos de fonte (estilo <i>font-size</i>) <b><i>em</i></b> e <b><i>rem</i></b> são relativos, ou seja, variam de acordo com o tamanho de suas respectivas tags "mãe" (parent). Já o tamanho <b><i>px</i></b> (pixels) é fixo em cada dispositivo. Em um design responsivo não se deve usar tamanho de fonte em pixels, sendo mais adequado utilizar rem ou em.</p>
+		<p>Diferença entre os tamanhos <i>rem</i> e <i>em</i></p>
+		<p><b>Tamanho <i>rem</i></b> - O "r" siginifica "raiz", ou seja, o tamanho do texto será proporcional ao tamanho do texto associado à tag &lt;html&gt; (raiz da árvore do DOM). Exemplo: o tamanho padrão de texto no Chrome é 16 pixels. Um tamanho <i>2rem</i> equivale a 2 x 16pixels=32 pixels. Da mesma forma, um tamanho <i>.5rem</i> equivale a 8 pixels. O tamanho de fonte de uma tag com estilo <i>rem</i> só muda se mudarmos o tamanho de fonte da tag &lt;html&gt;.</p>
+		<p><b>Tamanho <i>em</i></b>- O tamanho do texto será proporcional ao tamanho do texto da tag parent daquela onde o estilo foi aplicado. Exemplo: na marcação HTML abaixo, a &lt;div&gt; tem tamanho de fonte= 32 pixels, logo, se aplicarmos a uma tag filha dessa div um tamanho <i>2em</i>, essa filha teria tamanho de fonte igual a 64 pixels. Da mesma forma, se aplicassemos um tamanho de <i>.5em</i>, a tag filha teria tamanho de fonte igual a 16px. Qualquer mudança de tamanho de fonte da &lt;div&gt; modificaria o tamanho de fonte da tag filha.</p>
+
+		<hr>
+		<p id="titulo"></p>
+		<p id="p1" class="tamanho2em">Tamanho 2em</p>
+		<p id="p2" class="tamanho2rem">Tamanho 2rem</p>
+
+		<div id="caixa">
+			<p>Tamanho de fonte da div=32px</p>
+			<p id="p3" class="tamanho2em">2em</p>
+			<p id="p4" class="tamanho2rem">2rem</p>
+		</div>
+	</div>
+</body>
+</html>
